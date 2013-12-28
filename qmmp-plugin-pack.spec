@@ -2,7 +2,7 @@
 
 Summary:	A set of extra plug-ins for Qmmp
 Name:		qmmp-plugin-pack
-Version:	0.7.3
+Version:	0.7.4
 Release:	1
 Group:		Sound
 License:	GPLv2+
