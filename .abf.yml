@@ -1,2 +1,5 @@
+removed_sources:
+  qmmp-plugin-pack-0.7.2.tar.bz2: 939402aaf9fa8acb33602fba9b52fc06df1079ad
+  qmmp-plugin-pack-0.7.3.tar.bz2: e4a45d0f5c751b1a674bcfeead1f4d9b7fe09592
 sources:
-  "qmmp-plugin-pack-0.7.2.tar.bz2": 939402aaf9fa8acb33602fba9b52fc06df1079ad
+  qmmp-plugin-pack-0.7.5.tar.bz2: 0a955758c86b769d96b3b9e1b187596a2447ee19
