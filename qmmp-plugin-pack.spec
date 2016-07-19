@@ -12,6 +12,7 @@ BuildRequires:	cmake
 BuildRequires:	yasm
 BuildRequires:	qt5-devel
 BuildRequires: qt5-linguist
+BuildRequires: cmake(Qt5LinguistTools)
 BuildRequires:	pkgconfig(libmpg123)
 BuildRequires:	pkgconfig(qmmp) >= %{version}
 BuildRequires:	pkgconfig(qmmpui) >= %{version}
