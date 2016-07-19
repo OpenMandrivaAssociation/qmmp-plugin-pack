@@ -2,22 +2,24 @@
 
 Summary:	A set of extra plug-ins for Qmmp
 Name:		qmmp-plugin-pack
-Version:	0.8.0
-Release:	2
+Version:	1.1.1
+Release:	1
 Group:		Sound
 License:	GPLv2+
 Url:		http://qmmp.ylsoftware.com/plugins.php
 Source0:	http://qmmp.ylsoftware.com/files/plugins/%{name}-%{version}.tar.bz2
 BuildRequires:	cmake
 BuildRequires:	yasm
-BuildRequires:	qt4-devel
+BuildRequires:	qt5-devel
+BuildRequires: qt5-linguist
+BuildRequires: cmake(Qt5LinguistTools)
 BuildRequires:	pkgconfig(libmpg123)
 BuildRequires:	pkgconfig(qmmp) >= %{version}
 BuildRequires:	pkgconfig(qmmpui) >= %{version}
 BuildRequires:	pkgconfig(taglib)
 Suggests:	%{oname}-ffap = %{EVRD}
 Suggests:	%{oname}-mpg123 = %{EVRD}
-Suggests:	%{oname}-simple-ui = %{EVRD}
+
 
 %description
 Plug-ins for Qmmp from Qmmp Plug-in Pack:
@@ -56,19 +58,6 @@ using of libmpg123 library).
 %doc AUTHORS COPYING ChangeLog.rus README README.RUS ChangeLog ChangeLog.svn
 %{_libdir}/%{oname}/Input/libmpg123.so
 
-#----------------------------------------------------------------------------
-
-%package -n %{oname}-simple-ui
-Summary:	Qmmp Simple UI Plugin
-Group:		Sound
-
-%description -n %{oname}-simple-ui
-This is the Simple UI Plugin for Qmmp (simple user interface based on standard
-widgets set).
-
-%files -n %{oname}-simple-ui
-%doc AUTHORS COPYING ChangeLog.rus README README.RUS ChangeLog ChangeLog.svn
-%{_libdir}/%{oname}/Ui/libqsui.so
 
 #----------------------------------------------------------------------------
 
@@ -76,7 +65,7 @@ widgets set).
 %setup -q
 
 %build
-%cmake_qt4
+%cmake_qt5
 %make
 
 %install
