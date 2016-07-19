@@ -2,15 +2,15 @@
 
 Summary:	A set of extra plug-ins for Qmmp
 Name:		qmmp-plugin-pack
-Version:	0.8.0
-Release:	2
+Version:	1.1.1
+Release:	1
 Group:		Sound
 License:	GPLv2+
 Url:		http://qmmp.ylsoftware.com/plugins.php
 Source0:	http://qmmp.ylsoftware.com/files/plugins/%{name}-%{version}.tar.bz2
 BuildRequires:	cmake
 BuildRequires:	yasm
-BuildRequires:	qt4-devel
+BuildRequires:	qt5-devel
 BuildRequires:	pkgconfig(libmpg123)
 BuildRequires:	pkgconfig(qmmp) >= %{version}
 BuildRequires:	pkgconfig(qmmpui) >= %{version}
