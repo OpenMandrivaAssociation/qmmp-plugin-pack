@@ -19,7 +19,6 @@ BuildRequires:	pkgconfig(qmmpui) >= %{version}
 BuildRequires:	pkgconfig(taglib)
 Suggests:	%{oname}-ffap = %{EVRD}
 Suggests:	%{oname}-mpg123 = %{EVRD}
-Suggests:	%{oname}-simple-ui = %{EVRD}
 
 
 %description
@@ -59,19 +58,6 @@ using of libmpg123 library).
 %doc AUTHORS COPYING ChangeLog.rus README README.RUS ChangeLog ChangeLog.svn
 %{_libdir}/%{oname}/Input/libmpg123.so
 
-#----------------------------------------------------------------------------
-
-%package -n %{oname}-simple-ui
-Summary:	Qmmp Simple UI Plugin
-Group:		Sound
-
-%description -n %{oname}-simple-ui
-This is the Simple UI Plugin for Qmmp (simple user interface based on standard
-widgets set).
-
-%files -n %{oname}-simple-ui
-%doc AUTHORS COPYING ChangeLog.rus README README.RUS ChangeLog ChangeLog.svn
-%{_libdir}/%{oname}/Ui/libqsui.so
 
 #----------------------------------------------------------------------------
 
