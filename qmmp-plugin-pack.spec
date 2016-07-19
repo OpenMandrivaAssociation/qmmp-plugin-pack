@@ -21,6 +21,7 @@ Suggests:	%{oname}-ffap = %{EVRD}
 Suggests:	%{oname}-mpg123 = %{EVRD}
 Suggests:	%{oname}-simple-ui = %{EVRD}
 
+
 %description
 Plug-ins for Qmmp from Qmmp Plug-in Pack:
  * FFap - enhanced Monkey's Audio (APE) decoder
