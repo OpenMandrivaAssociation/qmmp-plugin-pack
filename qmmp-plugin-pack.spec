@@ -11,6 +11,7 @@ Source0:	http://qmmp.ylsoftware.com/files/plugins/%{name}-%{version}.tar.bz2
 BuildRequires:	cmake
 BuildRequires:	yasm
 BuildRequires:	qt5-devel
+BuildRequires: qt5-linguist
 BuildRequires:	pkgconfig(libmpg123)
 BuildRequires:	pkgconfig(qmmp) >= %{version}
 BuildRequires:	pkgconfig(qmmpui) >= %{version}
