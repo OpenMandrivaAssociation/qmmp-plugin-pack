@@ -76,7 +76,7 @@ widgets set).
 %setup -q
 
 %build
-%cmake_qt4
+%cmake_qt5
 %make
 
 %install
