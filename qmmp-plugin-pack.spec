@@ -29,6 +29,8 @@ Plug-ins for Qmmp from Qmmp Plug-in Pack:
  * Simple Ui - simple user interface based on standard widgets set
 
 %files
+%{_libdir}/qmmp/General/libhistory.so
+%{_libdir}/qmmp/Visual/libgoom.so
 
 #----------------------------------------------------------------------------
 
