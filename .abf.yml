@@ -1,2 +1,4 @@
-sources:
+removed_sources:
   qmmp-plugin-pack-1.1.1.tar.bz2: a8e0d65747337f369267da776cb06aafc5cbf2d9
+sources:
+  qmmp-plugin-pack-1.2.0.tar.bz2: 4eccd38919b8e714bf13783dd3fa54a4c09fd30f
