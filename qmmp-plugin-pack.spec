@@ -14,10 +14,13 @@ BuildRequires:	yasm
 BuildRequires:	qt5-devel
 BuildRequires:	qt5-linguist
 BuildRequires:	cmake(Qt5LinguistTools)
-BuildRequires:	pkgconfig(libmpg123)
+BuildRequires:	pkgconfig(samplerate)
 BuildRequires:	pkgconfig(qmmp) >= %{version}
 BuildRequires:	pkgconfig(qmmpui) >= %{version}
 BuildRequires:	pkgconfig(taglib)
+BuildRequires:	pkgconfig(libavcodec)
+BuildRequires:	pkgconfig(libavformat)
+BuildRequires:	pkgconfig(libavutil)
 Suggests:	%{oname}-ffap = %{EVRD}
 # Gone in 1.3.x
 Obsoletes:	%{oname}-mpg123 < %{EVRD}
