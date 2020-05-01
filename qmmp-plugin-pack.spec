@@ -3,7 +3,7 @@
 
 Summary:	A set of extra plug-ins for Qmmp
 Name:		qmmp-plugin-pack
-Version:	1.3.1
+Version:	1.4.0
 Release:	1
 Group:		Sound
 License:	GPLv2+
@@ -58,7 +58,7 @@ This is the FFap Input Plugin for Qmmp (enhanced Monkey's Audio (APE) decoder,
 
 %build
 %cmake_qt5
-%make
+%make_build
 
 %install
-%makeinstall_std -C build
+%make_install -C build
