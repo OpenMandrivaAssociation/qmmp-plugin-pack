@@ -3,7 +3,7 @@
 
 Summary:	A set of extra plug-ins for Qmmp
 Name:		qmmp-plugin-pack
-Version:	1.4.0
+Version:	1.51..0
 Release:	1
 Group:		Sound
 License:	GPLv2+
@@ -14,6 +14,10 @@ BuildRequires:	yasm
 BuildRequires:	qt5-devel
 BuildRequires:	qt5-linguist
 BuildRequires:	cmake(Qt5LinguistTools)
+BuildRequires: cmake(Qt5Core)
+BuildRequires: cmake(Qt5Gui)
+BuildRequires: cmake(Qt5Help)
+BuildRequires: cmake(Qt5Network)
 BuildRequires:	pkgconfig(samplerate)
 BuildRequires:	pkgconfig(qmmp) >= %{version}
 BuildRequires:	pkgconfig(qmmpui) >= %{version}
