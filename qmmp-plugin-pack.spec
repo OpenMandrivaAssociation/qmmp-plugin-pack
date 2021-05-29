@@ -25,6 +25,7 @@ BuildRequires:	pkgconfig(taglib)
 BuildRequires:	pkgconfig(libavcodec)
 BuildRequires:	pkgconfig(libavformat)
 BuildRequires:	pkgconfig(libavutil)
+BuildRequires: pkgconfig(libxmp)
 Suggests:	%{oname}-ffap = %{EVRD}
 # Gone in 1.3.x
 Obsoletes:	%{oname}-mpg123 < %{EVRD}
@@ -63,6 +64,8 @@ This is the FFap Input Plugin for Qmmp (enhanced Monkey's Audio (APE) decoder,
 %setup -q
 
 %build
+export CC=gcc
+export CXX=g++
 %cmake_qt5
 %make_build
 
