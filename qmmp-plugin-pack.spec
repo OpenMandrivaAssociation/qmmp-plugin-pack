@@ -26,7 +26,7 @@ BuildRequires:	pkgconfig(libavcodec)
 BuildRequires:	pkgconfig(libavformat)
 BuildRequires:	pkgconfig(libavutil)
 BuildRequires: pkgconfig(libxmp)
-Suggests:	%{oname}-ffap = %{EVRD}
+Recommends:	%{oname}-ffap = %{EVRD}
 # Gone in 1.3.x
 Obsoletes:	%{oname}-mpg123 < %{EVRD}
 
@@ -42,6 +42,7 @@ Plug-ins for Qmmp from Qmmp Plug-in Pack:
 %{_libdir}/qmmp-%{major}/Effect/libsrconverter.so
 %{_libdir}/qmmp-%{major}/Engines/libffvideo.so
 %{_libdir}/qmmp-%{major}/Transports/libytb.so
+%{_libdir}/qmmp-%{major}/Input/libxmp.so
 %{_datadir}/metainfo/qmmp-plugin-pack.appdata.xml
 
 #----------------------------------------------------------------------------
@@ -64,6 +65,12 @@ This is the FFap Input Plugin for Qmmp (enhanced Monkey's Audio (APE) decoder,
 %setup -q
 
 %build
+# As of 1.5.0 can't compile with Clang, due to change in FFAP
+# from changelog:
+#" replaced assembler optimizations by GCC attributes in the ffap plugin"
+#this cause this error at compiling: 
+# /builddir/build/BUILD/qmmp-plugin-pack-1.5.0/src/Input/ffap/ffap.c:1257:1: error: function multiversioning is not supported on the current target
+# DECLARE_SCALARPRODUCT_AND_MADD(c, "default")
 export CC=gcc
 export CXX=g++
 %cmake_qt5
