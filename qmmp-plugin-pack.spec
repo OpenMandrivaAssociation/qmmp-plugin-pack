@@ -4,7 +4,7 @@
 Summary:	A set of extra plug-ins for Qmmp
 Name:		qmmp-plugin-pack
 Version:	1.5.0
-Release:	1
+Release:	2
 Group:		Sound
 License:	GPLv2+
 Url:		http://qmmp.ylsoftware.com/plugins.php
@@ -71,8 +71,8 @@ This is the FFap Input Plugin for Qmmp (enhanced Monkey's Audio (APE) decoder,
 #this cause this error at compiling: 
 # /builddir/build/BUILD/qmmp-plugin-pack-1.5.0/src/Input/ffap/ffap.c:1257:1: error: function multiversioning is not supported on the current target
 # DECLARE_SCALARPRODUCT_AND_MADD(c, "default")
-export CC=gcc
-export CXX=g++
+#export CC=gcc
+#export CXX=g++
 %cmake_qt5
 %make_build
 
