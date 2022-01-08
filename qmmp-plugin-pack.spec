@@ -3,7 +3,7 @@
 
 Summary:	A set of extra plug-ins for Qmmp
 Name:		qmmp-plugin-pack
-Version:	1.5.0
+Version:	2.0.1
 Release:	1
 Group:		Sound
 License:	GPLv2+
@@ -11,13 +11,18 @@ Url:		http://qmmp.ylsoftware.com/plugins.php
 Source0:	http://qmmp.ylsoftware.com/files/plugins/%{name}-%{version}.tar.bz2
 BuildRequires:	cmake
 BuildRequires:	yasm
-BuildRequires:	qt5-devel
-BuildRequires:	qt5-linguist
-BuildRequires:	cmake(Qt5LinguistTools)
-BuildRequires: cmake(Qt5Core)
-BuildRequires: cmake(Qt5Gui)
-BuildRequires: cmake(Qt5Help)
-BuildRequires: cmake(Qt5Network)
+BuildRequires:	cmake(Qt6Core)
+BuildRequires:	cmake(Qt6Gui)
+BuildRequires:	cmake(Qt6GuiTools)
+BuildRequires:	cmake(Qt6Widgets)
+BuildRequires:	cmake(Qt6Multimedia)
+BuildRequires:	cmake(Qt6Network)
+BuildRequires:	cmake(Qt6DBus)
+BuildRequires:	cmake(Qt6OpenGLWidgets)
+BuildRequires:	cmake(Qt6Sql)
+BuildRequires:	cmake(Qt6OpenGL)
+BuildRequires:	cmake(Qt6OpenGLWidgets)
+BuildRequires:	qt6-qttools
 BuildRequires:	pkgconfig(samplerate)
 BuildRequires:	pkgconfig(qmmp) >= %{version}
 BuildRequires:	pkgconfig(qmmpui) >= %{version}
