@@ -34,6 +34,8 @@ BuildRequires:	pkgconfig(libavcodec)
 BuildRequires:	pkgconfig(libavformat)
 BuildRequires:	pkgconfig(libavutil)
 BuildRequires: pkgconfig(libxmp)
+BuildRequires: pkgconfig(xkbcommon)
+BuildRequires: pkgconfig(xkbcommon-x11)
 Recommends:	%{oname}-ffap = %{EVRD}
 # Gone in 1.3.x
 Obsoletes:	%{oname}-mpg123 < %{EVRD}
