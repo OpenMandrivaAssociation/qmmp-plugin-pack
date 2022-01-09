@@ -26,6 +26,8 @@ BuildRequires:	cmake(Qt6OpenGLWidgets)
 BuildRequires:	qt6-qttools
 BuildRequires: pkgconfig(openssl)
 BuildRequires:	pkgconfig(opengl)
+BuildRequires: pkgconfig(vulkan)
+BuildRequires: vulkan-headers
 BuildRequires:	pkgconfig(samplerate)
 BuildRequires:	pkgconfig(qmmp) >= %{version}
 BuildRequires:	pkgconfig(qmmpui) >= %{version}
