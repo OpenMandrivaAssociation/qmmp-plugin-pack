@@ -10,6 +10,7 @@ License:	GPLv2+
 Url:		http://qmmp.ylsoftware.com/plugins.php
 Source0:	http://qmmp.ylsoftware.com/files/plugins/%{name}-%{version}.tar.bz2
 BuildRequires:	cmake
+BuildRequires: qt6-cmake
 BuildRequires:	yasm
 BuildRequires:	cmake(Qt6Core)
 BuildRequires:	cmake(Qt6Gui)
