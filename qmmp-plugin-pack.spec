@@ -79,7 +79,7 @@ This is the FFap Input Plugin for Qmmp (enhanced Monkey's Audio (APE) decoder,
 # DECLARE_SCALARPRODUCT_AND_MADD(c, "default")
 export CC=gcc
 export CXX=g++
-%cmake_qt5
+%cmake
 %make_build
 
 %install
