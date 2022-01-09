@@ -24,6 +24,8 @@ BuildRequires:	cmake(Qt6Sql)
 BuildRequires:	cmake(Qt6OpenGL)
 BuildRequires:	cmake(Qt6OpenGLWidgets)
 BuildRequires:	qt6-qttools
+BuildRequires: pkgconfig(openssl)
+BuildRequires:	pkgconfig(opengl)
 BuildRequires:	pkgconfig(samplerate)
 BuildRequires:	pkgconfig(qmmp) >= %{version}
 BuildRequires:	pkgconfig(qmmpui) >= %{version}
