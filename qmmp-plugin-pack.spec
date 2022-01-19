@@ -4,13 +4,13 @@
 Summary:	A set of extra plug-ins for Qmmp
 Name:		qmmp-plugin-pack
 Version:	2.0.1
-Release:	1
+Release:	2
 Group:		Sound
 License:	GPLv2+
 Url:		http://qmmp.ylsoftware.com/plugins.php
 Source0:	http://qmmp.ylsoftware.com/files/plugins/%{name}-%{version}.tar.bz2
-BuildRequires:	cmake
-BuildRequires: qt6-cmake
+BuildRequires:	cmake ninja
+BuildRequires:	qt6-cmake
 BuildRequires:	yasm
 BuildRequires:	cmake(Qt6Core)
 BuildRequires:	cmake(Qt6Gui)
@@ -24,10 +24,10 @@ BuildRequires:	cmake(Qt6Sql)
 BuildRequires:	cmake(Qt6OpenGL)
 BuildRequires:	cmake(Qt6OpenGLWidgets)
 BuildRequires:	qt6-qttools
-BuildRequires: pkgconfig(openssl)
+BuildRequires:	pkgconfig(openssl)
 BuildRequires:	pkgconfig(opengl)
-BuildRequires: pkgconfig(vulkan)
-BuildRequires: vulkan-headers
+BuildRequires:	pkgconfig(vulkan)
+BuildRequires:	vulkan-headers
 BuildRequires:	pkgconfig(samplerate)
 BuildRequires:	pkgconfig(qmmp) >= %{version}
 BuildRequires:	pkgconfig(qmmpui) >= %{version}
@@ -35,9 +35,9 @@ BuildRequires:	pkgconfig(taglib)
 BuildRequires:	pkgconfig(libavcodec)
 BuildRequires:	pkgconfig(libavformat)
 BuildRequires:	pkgconfig(libavutil)
-BuildRequires: pkgconfig(libxmp)
-BuildRequires: pkgconfig(xkbcommon)
-BuildRequires: pkgconfig(xkbcommon-x11)
+BuildRequires:	pkgconfig(libxmp)
+BuildRequires:	pkgconfig(xkbcommon)
+BuildRequires:	pkgconfig(xkbcommon-x11)
 Recommends:	%{oname}-ffap = %{EVRD}
 # Gone in 1.3.x
 Obsoletes:	%{oname}-mpg123 < %{EVRD}
@@ -75,18 +75,14 @@ This is the FFap Input Plugin for Qmmp (enhanced Monkey's Audio (APE) decoder,
 
 %prep
 %setup -q
-
-%build
-# As of 1.5.0 can't compile with Clang, due to change in FFAP
-# from changelog:
-#" replaced assembler optimizations by GCC attributes in the ffap plugin"
-#this cause this error at compiling: 
-# /builddir/build/BUILD/qmmp-plugin-pack-1.5.0/src/Input/ffap/ffap.c:1257:1: error: function multiversioning is not supported on the current target
-# DECLARE_SCALARPRODUCT_AND_MADD(c, "default")
+# As of 2.0.1, clang 13.0.0,
+# building with clang crashes at compile time
 export CC=gcc
 export CXX=g++
-%cmake
-%make_build
+%cmake -G Ninja
+
+%build
+%ninja_build -C build
 
 %install
-%make_install -C build
+%ninja_install -C build
