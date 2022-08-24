@@ -56,7 +56,7 @@ Plug-ins for Qmmp from Qmmp Plug-in Pack:
 %{_libdir}/qmmp-%{major}/Effect/libsrconverter.so
 %{_libdir}/qmmp-%{major}/Engines/libffvideo.so
 %{_libdir}/qmmp-%{major}/Transports/libytb.so
-%{_libdir}/qmmp-%{major}/Input/libxmp.so
+#{_libdir}/qmmp-%{major}/Input/libxmp.so
 %{_datadir}/metainfo/qmmp-plugin-pack.appdata.xml
 
 #----------------------------------------------------------------------------
