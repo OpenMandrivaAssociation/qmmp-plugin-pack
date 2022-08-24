@@ -39,6 +39,7 @@ BuildRequires:	pkgconfig(libavutil)
 BuildRequires:	pkgconfig(libxmp)
 BuildRequires:	pkgconfig(xkbcommon)
 BuildRequires:	pkgconfig(xkbcommon-x11)
+BuildRequires: pkgconfig(zlib)
 Recommends:	%{oname}-ffap = %{EVRD}
 # Gone in 1.3.x
 Obsoletes:	%{oname}-mpg123 < %{EVRD}
