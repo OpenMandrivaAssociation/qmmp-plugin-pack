@@ -24,6 +24,7 @@ BuildRequires:	cmake(Qt6Sql)
 BuildRequires:	cmake(Qt6OpenGL)
 BuildRequires:	cmake(Qt6OpenGLWidgets)
 BuildRequires:	qt6-qttools
+BuildRequires: cmake(Qt6LinguistTools)
 BuildRequires:	pkgconfig(openssl)
 BuildRequires:	pkgconfig(opengl)
 BuildRequires:	pkgconfig(vulkan)
