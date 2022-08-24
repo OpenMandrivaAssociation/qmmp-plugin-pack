@@ -3,8 +3,8 @@
 
 Summary:	A set of extra plug-ins for Qmmp
 Name:		qmmp-plugin-pack
-Version:	2.0.1
-Release:	2
+Version:	2.1.0
+Release:	1
 Group:		Sound
 License:	GPLv2+
 Url:		http://qmmp.ylsoftware.com/plugins.php
@@ -24,6 +24,7 @@ BuildRequires:	cmake(Qt6Sql)
 BuildRequires:	cmake(Qt6OpenGL)
 BuildRequires:	cmake(Qt6OpenGLWidgets)
 BuildRequires:	qt6-qttools
+BuildRequires: cmake(Qt6LinguistTools)
 BuildRequires:	pkgconfig(openssl)
 BuildRequires:	pkgconfig(opengl)
 BuildRequires:	pkgconfig(vulkan)
@@ -38,6 +39,7 @@ BuildRequires:	pkgconfig(libavutil)
 BuildRequires:	pkgconfig(libxmp)
 BuildRequires:	pkgconfig(xkbcommon)
 BuildRequires:	pkgconfig(xkbcommon-x11)
+BuildRequires: pkgconfig(zlib)
 Recommends:	%{oname}-ffap = %{EVRD}
 # Gone in 1.3.x
 Obsoletes:	%{oname}-mpg123 < %{EVRD}
@@ -54,7 +56,7 @@ Plug-ins for Qmmp from Qmmp Plug-in Pack:
 %{_libdir}/qmmp-%{major}/Effect/libsrconverter.so
 %{_libdir}/qmmp-%{major}/Engines/libffvideo.so
 %{_libdir}/qmmp-%{major}/Transports/libytb.so
-%{_libdir}/qmmp-%{major}/Input/libxmp.so
+#{_libdir}/qmmp-%{major}/Input/libxmp.so
 %{_datadir}/metainfo/qmmp-plugin-pack.appdata.xml
 
 #----------------------------------------------------------------------------
