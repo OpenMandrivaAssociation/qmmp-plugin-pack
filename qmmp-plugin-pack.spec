@@ -3,12 +3,12 @@
 
 Summary:	A set of extra plug-ins for Qmmp
 Name:		qmmp-plugin-pack
-Version:	2.1.1
-Release:	2
+Version:	2.1.2
+Release:	1
 Group:		Sound
 License:	GPLv2+
-Url:		http://qmmp.ylsoftware.com/plugins.php
-Source0:	http://qmmp.ylsoftware.com/files/plugins/%{name}-%{version}.tar.bz2
+Url:		https://qmmp.ylsoftware.com/plugins.php
+Source0:	https://qmmp.ylsoftware.com/files/plugins/%{name}-%{version}.tar.bz2
 BuildRequires:	cmake ninja
 BuildRequires:	qt6-cmake
 BuildRequires:	yasm
