@@ -4,7 +4,7 @@
 Summary:	A set of extra plug-ins for Qmmp
 Name:		qmmp-plugin-pack
 Version:	2.2.2
-Release:	1
+Release:	2
 Group:		Sound
 License:	GPLv2+
 Url:		https://qmmp.ylsoftware.com/plugins.php
