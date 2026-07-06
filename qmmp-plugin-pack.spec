@@ -79,8 +79,8 @@ This is the FFap Input Plugin for Qmmp (enhanced Monkey's Audio (APE) decoder,
 %setup -q
 # As of 2.0.1, clang 13.0.0,
 # building with clang crashes at compile time
-export CC=gcc
-export CXX=g++
+#export CC=gcc
+#export CXX=g++
 %cmake -G Ninja
 
 %build
